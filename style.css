@@ -87,13 +87,6 @@ hero {
   margin: 0 auto;
 }
 
-.logo-big {
-  width: 280px;          /* adjust size as needed */
-  height: auto;
-  display: block;
-  margin: 40px auto 30px; /* top + bottom spacing */
-}
-
 
  .hero .hero-content {
     width: 70%;

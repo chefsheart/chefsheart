@@ -64,16 +64,7 @@ img {
 } */
 
 /* Hero */
-.hero {
-    margin-bottom: 50px;
-}
 
-.logo-big {
-  width: 250px;         
-  height: auto;
-  display: block;
-  margin: 0 auto 30px;  
-}
 .hero .container {
     background: url('../Downloads/CH/tempbg.png') no-repeat;
     background-size: contain;
@@ -81,6 +72,27 @@ img {
     height: 250px;
     padding: 0 0;
 }
+
+.hero {
+  text-align: center;         /* center all hero content */
+  padding: 80px 20px;         /* add breathing room above/below */
+  position: relative;         /* ensures child elements stay contained */
+  z-index: 1;                 /* keeps hero above other sections */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo-big {
+  width: 250px;               /* control logo size */
+  height: auto;               /* keep proportions */
+  margin: 30px auto;          /* space above/below logo */
+  display: block;
+}
+
+
 
  .hero .hero-content {
     width: 70%;

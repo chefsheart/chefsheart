@@ -69,10 +69,10 @@ img {
 }
 
 .logo-big {
-  width: 300px;     /* adjust size as needed */
-  height: auto;     /* keeps proportions */
-  display: block;   /* makes it a block element */
-  margin: 0 auto 20px; /* centers and adds space below */
+  width: 250px;         
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;  
 }
 .hero .container {
     background: url('../Downloads/CH/tempbg.png') no-repeat;

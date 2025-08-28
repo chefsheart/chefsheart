@@ -73,11 +73,13 @@ img {
     padding: 0 0;
 }
 
-.hero {
-  text-align: center;         /* center all hero content */
-  padding: 80px 20px;         /* add breathing room above/below */
-  position: relative;         /* ensures child elements stay contained */
-  z-index: 1;                 /* keeps hero above other sections */
+hero {
+  text-align: center;
+  padding: 100px 20px;   /* more space top/bottom */
+  min-height: 100vh;     /* full screen height */
+  position: relative;
+  z-index: 1;            /* keeps it above following sections */
+  background: #fff;      /* optional: ensures it’s on a white background */
 }
 
 .hero-content {
@@ -86,12 +88,11 @@ img {
 }
 
 .logo-big {
-  width: 250px;               /* control logo size */
-  height: auto;               /* keep proportions */
-  margin: 30px auto;          /* space above/below logo */
+  width: 280px;          /* adjust size as needed */
+  height: auto;
   display: block;
+  margin: 40px auto 30px; /* top + bottom spacing */
 }
-
 
 
  .hero .hero-content {

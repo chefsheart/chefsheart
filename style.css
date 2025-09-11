@@ -911,3 +911,24 @@ background: #dfceb4;
         margin-bottom: 20px;
     }
 }
+
+/* Hide menu by default */
+.mobile-menu {
+  display: none;
+}
+
+/* Show when active */
+.mobile-menu.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .main-menu > ul {
+    display: none; /* Hide desktop menu on mobile */
+  }
+
+  .hamburger-button {
+    display: block; /* Show hamburger on mobile */
+    cursor: pointer;
+  }
+}

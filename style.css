@@ -842,3 +842,17 @@ background: #dfceb4;
 
 
 /* Mobile-first responsive fixes */
+@media (max-width: 768px) {
+    .hero {
+        padding-bottom: 10px;       /* remove extra bottom padding */
+    }
+
+    .hero-buttons {
+        margin-bottom: 5px;         /* shrink space below button */
+    }
+
+    .counter-wrapper {
+        margin-top: 0;              /* remove top margin */
+        padding-top: 0;             /* remove extra padding */
+    }
+}

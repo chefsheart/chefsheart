@@ -846,6 +846,12 @@ background: #dfceb4;
     color: #4b340c;
 }
 
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
 .coming-text p {
     max-width: 800px;
     margin: 0 auto;

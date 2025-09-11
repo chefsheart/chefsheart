@@ -1,18 +1,15 @@
 //mobile menu
 
+// MOBILE MENU TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerButton = document.querySelector('.hamburger-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
+  const hamburgerButton = document.querySelector('.hamburger-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-    hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'));
-});
-    <!-- Mobile --> 
-    const hamburger = document.getElementById('hamburger-button');
-const mobileMenu = document.querySelector('.mobile-menu');
+  if (!hamburgerButton || !mobileMenu) return; // safety check
 
-hamburger.addEventListener('click', () => {
-    mobileMenu.style.display = 
-        mobileMenu.style.display === 'block' ? 'none' : 'block';
+  hamburgerButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
 });
     
 

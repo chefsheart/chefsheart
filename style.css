@@ -812,14 +812,14 @@ background: #dfceb4;
 }
 
 .meal-kits {
-    background-color: #f4ebe0;
+    background-color: #f4ebe0; /* tan background */
     text-align: center;
-    width: 100vw;                 /* full viewport width */
-    max-width: 100vw;
+    width: 100vw;               /* full viewport width */
     margin-left: calc(-50vw + 50%);  /* stretch to edges */
     margin-right: calc(-50vw + 50%);
     padding: 60px 20px;
     box-sizing: border-box;
+    position: relative;         /* required for margin trick */
 }
 /* Meal Preview */
 .meal-preview {

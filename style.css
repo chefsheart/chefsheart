@@ -815,14 +815,14 @@ background: #dfceb4;
     padding: 60px 20px;
     background-color: #f4ebe0;
     text-align: center;
-    height: 80vh;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+
+    /* make it span full width */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 /* Meal Preview */
 .meal-preview {
     display: flex;

@@ -64,29 +64,17 @@ img {
 } */
 
 /* Hero */
+.hero {
+    margin-bottom: 50px;
+}
 
 .hero .container {
-  /*  background: url('tempbg.png') no-repeat;
+    background: url('tempbg.png') no-repeat;
     background-size: contain;
-    background-position: right bottom;*/
+    background-position: right bottom;
     height: 250px;
     padding: 0 0;
 }
-
-.hero {
-  text-align: center;
-  padding: 100px 20px;   /* more space top/bottom */
-  min-height: 100vh;     /* full screen height */
-  position: relative;
-  z-index: 1;            /* keeps it above following sections */
-  background: #fff;      /* optional: ensures it’s on a white background */
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 
  .hero .hero-content {
     width: 70%;
@@ -119,12 +107,17 @@ img {
  }
  
 /* utility classes */
-.container, .container-sm {
-    max-width: 1200px;
-    margin: 0 auto;  /* center */
+.container { 
+    max-width: 1450px;
+    margin: 0 auto;
     padding: 0 15px;
-    box-sizing: border-box;
 }
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* buttons */
 .btn {
     display: inline-block;
@@ -349,15 +342,6 @@ img {
     cursor: pointer;
 }
 
-.section {
-    width: 100%;            /* full width */
-    max-width: 1200px;      /* optional: keeps content from stretching too much */
-    margin: 0 auto;         /* centers section horizontally */
-    padding: 40px 15px;     /* inner spacing */
-    box-sizing: border-box;
-    text-align: center;     /* centers text inside */
-}
-
 /* Footer */
 .footer {
     padding: 40px 0;
@@ -460,10 +444,10 @@ img {
 
 /* Hamburger Button */
 .hamburger-button {
-    display: block;      /* show on mobile */
-    cursor: pointer;
+    display: none;
     background: none;
     border: none;
+    cursor: pointer;
     padding: 10px;
     z-index: 1000;
 }
@@ -471,21 +455,8 @@ img {
 .hamburger-button .hamburger-line {
     width: 30px;
     height: 3px;
-    background-color: #000;  /* black for contrast */
+    background-color: #333;
     margin: 6px 0;
-}
-
-.bg-tan, .bg-beige, .meal-kits {
-    width: 100%;         /* full width of parent (body) */
-    margin: 0 auto;      /* center */
-    padding: 40px 15px;  /* consistent spacing */
-    box-sizing: border-box;
-}
-
-.container, .container-sm {
-    max-width: 1200px;   /* same as footer */
-    margin: 0 auto;
-    padding: 0 15px;
 }
 /* Mobile Menu */
 .mobile-menu {
@@ -500,7 +471,8 @@ img {
     transition: right 0.3s ease-in-out;
 }
 
-.mobile-menu.active {
+.mobile-menu active 
+{
     right: 0;
 }
 .mobile-menu ul {
@@ -532,11 +504,12 @@ img {
     display: block;
  }
 
-.hero .container {
-    height: auto;  /* lets content determine height */
-    padding: 0;    /* keep padding minimal */
+ .hero .container {
+    background: url('tempbg.png') no-repeat; 
+    background-size: 350px 400px;
+    background-position: bottom;
+    height: 770px;
 }
-    
 }
 .hero .hero-content, .hero .hero-text {
     width: 100%;
@@ -551,10 +524,9 @@ img {
 /* counter animation */
 .counter-wrapper {
     text-align: center;
-    margin: 10px 0;
+    margin: 2rem 0;
     color:#ffffff;
 }
-
 
 .count {
     font-size: 3rem;
@@ -827,42 +799,34 @@ background: #dfceb4;
     color: #555;
 }
 
+/* Meal Kits */
 .meal-kits {
-    background-color: #f4ebe0; /* tan background */
+    padding: 60px 20px;
+    background-color: #f4ebe0;
     text-align: center;
-    width: 100%;               /* full width of parent (body) */
-    padding: 60px 15px;        /* inner spacing */
-    box-sizing: border-box;
+        height: 80vh;
+            /* fill full screen height */
+            width: 100vw;
+            /* fill full screen width */
+                /* Ensure it stretches edge-to-edge */
+                    position: relative;
+                    left: 50%;
+                    right: 50%;
+                    margin-left: -50vw;
+                    margin-right: -50vw;
 }
 
-/* Optional: inner content wrapper for max-width */
-.meal-kits-inner {
-    max-width: 1200px;   /* limits text/images width */
-    margin: 0 auto;      /* centers content */
-    padding: 0 15px;
-}
-/* Meal Preview */
 .meal-preview {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    padding: 0 10px;      /* prevent overflow on small screens */
 }
 
-/* Meal Preview Image */
 .meal-preview img {
-    max-width: 100%;      /* scale down on mobile */
-    width: 350px;         /* desktop size */
+    max-width: 350px;
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-/* Coming Text */
-.coming-text {
-    max-width: 800px;     /* desktop width */
-    margin: 0 auto;
-    padding: 0 10px;      /* prevent overflow */
 }
 
 .coming-text h3 {
@@ -871,182 +835,7 @@ background: #dfceb4;
 }
 
 .coming-text p {
+    max-width: 800px;
+    margin: 0 auto;
     color: #333;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-/* ===== MOBILE STYLES ===== */
-@media (max-width: 768px) {
-    /* Hide Coming Fall 2025 text */
-    .coming-text h3,
-    .coming-text p {
-        display: none;
-    }
-
-@media (max-width: 768px) {
-    .meal-kits {
-        height: auto;        /* let it expand with content */
-        padding-left: 15px;  /* inner padding for mobile */
-        padding-right: 15px;
-        left: 0;             /* remove the centering offset */
-        right: 0;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100vw;        /* full viewport width */
-    }
-}
-    /* Meal preview padding to prevent overflow */
-    .meal-preview {
-        padding: 0 15px;
-    }
-
-    /* Ensure meal image scales down */
-    .meal-preview img {
-        width: 100%;        /* takes container width */
-        max-width: 300px;   /* max image width */
-    }
-    /* Make navigation stack vertically */
-    .navbar .main-menu ul {
-        display: none; /* hide desktop menu */
-    }
-
-    .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        text-align: center;
-    }
-
-    .mobile-menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-menu li {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    /* Hamburger button visible on mobile */
-    .hamburger-button {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 10px;
-    }
-
-    /* Make hero text smaller */
-    .hero-heading {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .hero p {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    /* Footer stack vertically */
-    .footer-grid {
-        display: block;
-        text-align: center;
-    }
-
-    .footer-grid div {
-        margin-bottom: 20px;
-    }
-}
-
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 60px;  /* adjust to sit under navbar */
-    right: 0;
-    width: 100%;
-    background: #fff;
-    text-align: center;
-    z-index: 999;
-}
-
-.mobile-menu.active {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .main-menu > ul {
-        display: none;  /* hide desktop menu */
-    }
-}
-
-@media (max-width: 768px) {
-  .mobile-hide h3,
-  .mobile-hide p {
-    display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-menu > ul {
-    display: none; /* Hide desktop menu on mobile */
-  }
-
-  .hamburger-button {
-    display: block; /* Show hamburger on mobile */
-    cursor: pointer;
-  }
-}
-
-
-@media (max-width: 768px) {
-  /* Make hero full width and remove extra margins */
-  .hero .container {
-      max-width: 100%;
-      padding: 0 15px;
-      margin: 0;
-  }
-
-  /* Reduce hero padding */
-  .hero {
-      padding-top: 30px;
-      padding-bottom: 30px;
-  }
-
-  /* Reduce spacing for hero heading and paragraph */
-  .hero-heading.text-xxl {
-      margin: 10px 0 5px;
-      font-size: 1.8rem;
-  }
-
-  .hero.text-md {
-      margin: 5px 0 10px;
-      font-size: 1rem;
-  }
-
-  /* Reduce counter-wrapper spacing */
-  .counter-wrapper {
-      margin: 10px 0;
-      padding: 10px 0;
-  }
-}
-
-/* MOBILE FIX: Remove white space between hero button and counter */
-@media (max-width: 768px) {
-    .hero {
-        padding-bottom: 10px;       /* remove extra bottom padding */
-    }
-
-    .hero-buttons {
-        margin-bottom: 5px;         /* shrink space below button */
-    }
-
-    .counter-wrapper {
-        margin-top: 0;              /* remove top margin */
-        padding-top: 0;             /* remove extra padding */
-    }
 }

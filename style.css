@@ -454,22 +454,7 @@ hero {
     text-align: center;
 }
 
-/* Hamburger Button */
-.hamburger-button {
-    display: block;      /* show on mobile */
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 1000;
-}
 
-.hamburger-button .hamburger-line {
-    width: 30px;
-    height: 3px;
-    background-color: #000;  /* black for contrast */
-    margin: 6px 0;
-}
 
 .bg-tan, .bg-beige, .meal-kits {
     width: 100%;         /* full width of parent (body) */
@@ -486,21 +471,6 @@ hero {
 
 
 
-/* Mobile Menu */
-
-
-.mobile-menu ul {
-    margin-top: 100px;
-    padding-right: 10px;
-}
-
-.mobile-menu ul li {
-    margin: 10px 0;
-}
-.mobile-menu ul li a {
-    font-size: 20px;
-    transition: 0.3s;
-}
 
 /*(media queries) */
 @media (max-width: 960px) {
@@ -514,9 +484,6 @@ hero {
     display: none;
  }
 
- .navbar .hamburger-button {
-    display: block;
- }
 
 .hero .container {
     height: auto;  /* lets content determine height */
@@ -883,47 +850,9 @@ background: #dfceb4;
     }
 }
 
-    /* Ensure hamburger is visible on mobile */
-@media (max-width: 768px) {
-  .hamburger-button {
-    display: block;
-    z-index: 1001; /* above mobile menu */
-  }
+   
+  
 
-  .main-menu {
-    display: none; /* hide desktop menu */
-  }
-
-  .mobile-menu {
-    display: none; /* hidden by default */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    background: #fff;
-    z-index: 1000;
-    padding-top: 60px;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); /* hide offscreen */
-  }
-
-  .mobile-menu.active {
-    display: block;
-    transform: translateX(0); /* slide in */
-  }
-
-  .mobile-menu ul li {
-    margin: 10px 0;
-  }
-
-  .mobile-menu ul li a {
-    font-size: 20px;
-    color: #000;
-    display: block;
-  }
-}
     /* Meal preview padding to prevent overflow */
     .meal-preview {
         padding: 0 15px;
@@ -939,26 +868,7 @@ background: #dfceb4;
         display: none; /* hide desktop menu */
     }
 
-    .mobile-menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-menu li {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    /* Hamburger button visible on mobile */
-    .hamburger-button {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 10px;
-    }
-
+  
     /* Make hero text smaller */
     .hero-heading {
         font-size: 1.8rem;
@@ -981,21 +891,6 @@ background: #dfceb4;
     }
 }
 
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 60px;  /* adjust to sit under navbar */
-    right: 0;
-    width: 100%;
-    background: #fff;
-    text-align: center;
-    z-index: 999;
-}
-
-.mobile-menu.active {
-    display: block;
-}
-
 @media (max-width: 768px) {
     .main-menu > ul {
         display: none;  /* hide desktop menu */
@@ -1014,10 +909,7 @@ background: #dfceb4;
     display: none; /* Hide desktop menu on mobile */
   }
 
-  .hamburger-button {
-    display: block; /* Show hamburger on mobile */
-    cursor: pointer;
-  }
+ 
 }
 
 
@@ -1066,5 +958,61 @@ background: #dfceb4;
     .counter-wrapper {
         margin-top: 0;              /* remove top margin */
         padding-top: 0;             /* remove extra padding */
+    }
+}
+/* HAMBURGER & MOBILE MENU */
+.hamburger-button {
+    display: none; /* hide by default on desktop */
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;  /* black lines for contrast */
+    margin: 6px 0;
+}
+
+/* Mobile menu - hidden by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    padding-top: 60px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(100%); /* hide offscreen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0); /* slide in */
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    color: #000;
+    display: block;
+}
+
+/* MEDIA QUERY: show hamburger only on mobile */
+@media (max-width: 768px) {
+    .hamburger-button {
+        display: block; /* visible on mobile */
+    }
+    .main-menu {
+        display: none; /* hide desktop menu */
     }
 }

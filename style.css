@@ -470,6 +470,19 @@ hero {
     background-color: #000;  /* black for contrast */
     margin: 6px 0;
 }
+
+.bg-tan, .bg-beige, .meal-kits {
+    width: 100%;         /* full width of parent (body) */
+    margin: 0 auto;      /* center */
+    padding: 40px 15px;  /* consistent spacing */
+    box-sizing: border-box;
+}
+
+.container, .container-sm {
+    max-width: 1200px;   /* same as footer */
+    margin: 0 auto;
+    padding: 0 15px;
+}
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;

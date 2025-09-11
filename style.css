@@ -932,3 +932,33 @@ background: #dfceb4;
     cursor: pointer;
   }
 }
+
+/* ==== Mobile fix for text overflow ==== */
+@media (max-width: 768px) {
+  .heros-content, 
+  .meal-kits, 
+  .meal-preview, 
+  .coming-text {
+    max-width: 100%;         /* Prevents going off-screen */
+    overflow-wrap: break-word; /* Wrap long words if needed */
+    word-wrap: break-word;
+    text-align: center;       /* Center align for small screens */
+    padding: 0 15px;          /* Some breathing room on sides */
+    box-sizing: border-box;   /* Includes padding in width */
+  }
+
+  .hero-heading, 
+  .coming-text h3, 
+  .coming-text p {
+    font-size: 1.5rem;        /* Scale down large headings */
+    line-height: 1.3;
+  }
+
+  .coming-text p {
+    font-size: 1rem;          /* Normal body text size */
+  }
+
+  .meal-preview {
+    display: block;           /* Stack vertically */
+  }
+}

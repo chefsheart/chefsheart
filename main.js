@@ -6,7 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'));
 });
+    <!-- Mobile --> 
+    const hamburger = document.getElementById('hamburger-button');
+const mobileMenu = document.querySelector('.mobile-menu');
 
+hamburger.addEventListener('click', () => {
+    mobileMenu.style.display = 
+        mobileMenu.style.display === 'block' ? 'none' : 'block';
+});
+    
 
 // counter
   const counter = document.querySelector('.count');

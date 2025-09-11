@@ -851,3 +851,63 @@ background: #dfceb4;
     margin: 0 auto;
     color: #333;
 }
+
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+    /* Make navigation stack vertically */
+    .navbar .main-menu ul {
+        display: none; /* hide desktop menu */
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-menu li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Hamburger button visible on mobile */
+    .hamburger-button {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+
+    /* Make hero text smaller */
+    .hero-heading {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Footer stack vertically */
+    .footer-grid {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-grid div {
+        margin-bottom: 20px;
+    }
+}

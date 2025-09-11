@@ -924,6 +924,13 @@ background: #dfceb4;
 }
 
 @media (max-width: 768px) {
+  .mobile-hide h3,
+  .mobile-hide p {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
   .main-menu > ul {
     display: none; /* Hide desktop menu on mobile */
   }

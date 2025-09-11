@@ -839,3 +839,99 @@ background: #dfceb4;
     margin: 0 auto;
     color: #333;
 }
+
+
+/* Mobile-first responsive fixes */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar .main-menu {
+        display: none;
+    }
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    /* Hero section */
+    .hero .container,
+    .hero .hero-content,
+    .hero .hero-text,
+    .hero .hero-text-md {
+        width: 100% !important;
+        text-align: center;
+        margin: 0 auto;
+        background-size: contain !important;
+        background-position: center bottom !important;
+        height: auto !important;
+        padding: 20px 10px;
+    }
+
+    /* Full-width sections */
+    .meal-kits,
+    .bg-tan,
+    .bg-beige,
+    .contactus,
+    .donation {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        position: relative !important;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    /* Contact section */
+    .contact-container {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        height: auto !important;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        padding: 15px !important;
+        margin: 0 !important;
+    }
+
+    .contact-right {
+        display: none; /* optional: hide image/side on small screens */
+    }
+
+    .contact-inputs {
+        width: 90% !important;
+    }
+
+    /* Images & gallery */
+    .img-gallery {
+        width: 95% !important;
+        grid-template-columns: 1fr !important; /* stack images */
+        margin: 20px auto !important;
+    }
+
+    /* Team section */
+    .team-grid {
+        grid-template-columns: 1fr !important; /* stack team members */
+        gap: 20px !important;
+    }
+
+    /* Text resizing */
+    .text-xxl { font-size: 2rem !important; }
+    .text-xxll { font-size: 1.8rem !important; }
+    .text-xl { font-size: 1.5rem !important; }
+    .text-lg { font-size: 1.3rem !important; }
+    .text-lgg, .text-llgg, .text-md { font-size: 1.1rem !important; }
+    
+    /* Video section */
+    .video-content {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 90% !important;
+        text-align: center !important;
+    }
+}

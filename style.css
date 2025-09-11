@@ -349,6 +349,15 @@ img {
     cursor: pointer;
 }
 
+.section {
+    width: 100%;            /* full width */
+    max-width: 1200px;      /* optional: keeps content from stretching too much */
+    margin: 0 auto;         /* centers section horizontally */
+    padding: 40px 15px;     /* inner spacing */
+    box-sizing: border-box;
+    text-align: center;     /* centers text inside */
+}
+
 /* Footer */
 .footer {
     padding: 40px 0;

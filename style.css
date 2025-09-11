@@ -977,22 +977,33 @@ background: #dfceb4;
 
 
 @media (max-width: 768px) {
-  /* Shrink hero heading and paragraph margins */
+  /* Make hero full width and remove extra margins */
+  .hero .container {
+      max-width: 100%;
+      padding: 0 15px;
+      margin: 0;
+  }
+
+  /* Reduce hero padding */
+  .hero {
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  /* Reduce spacing for hero heading and paragraph */
   .hero-heading.text-xxl {
-      margin: 20px 0 5px; /* less bottom margin */
+      margin: 10px 0 5px;
+      font-size: 1.8rem;
   }
 
   .hero.text-md {
-      margin: 5px 0 10px; /* less top and bottom margin */
+      margin: 5px 0 10px;
+      font-size: 1rem;
   }
 
-  /* Reduce spacing for counter-wrapper */
+  /* Reduce counter-wrapper spacing */
   .counter-wrapper {
-      margin: 5px 0; /* less vertical space */
-  }
-
-  /* Optional: shrink padding inside hero for mobile */
-  .hero {
-      padding: 40px 15px;
+      margin: 10px 0;
+      padding: 10px 0;
   }
 }

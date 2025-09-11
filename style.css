@@ -814,12 +814,16 @@ background: #dfceb4;
 .meal-kits {
     background-color: #f4ebe0; /* tan background */
     text-align: center;
-    width: 100vw;               /* full viewport width */
-    margin-left: calc(-50vw + 50%);  /* stretch to edges */
-    margin-right: calc(-50vw + 50%);
-    padding: 60px 20px;
+    width: 100%;               /* full width of parent (body) */
+    padding: 60px 15px;        /* inner spacing */
     box-sizing: border-box;
-    position: relative;         /* required for margin trick */
+}
+
+/* Optional: inner content wrapper for max-width */
+.meal-kits-inner {
+    max-width: 1200px;   /* limits text/images width */
+    margin: 0 auto;      /* centers content */
+    padding: 0 15px;
 }
 /* Meal Preview */
 .meal-preview {

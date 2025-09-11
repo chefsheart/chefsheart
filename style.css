@@ -66,7 +66,7 @@ img {
 /* Hero */
 
 .hero .container {
-    background: url('../Downloads/CH/tempbg.png') no-repeat;
+    background: url('tempbg.png') no-repeat;
     background-size: contain;
     background-position: right bottom;
     height: 250px;

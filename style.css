@@ -73,7 +73,7 @@ img {
     padding: 0 0;
 }
 
-hero {
+.hero {
   text-align: center;
   padding: 100px 20px;   /* more space top/bottom */
   min-height: 100vh;     /* full screen height */
@@ -119,17 +119,12 @@ hero {
  }
  
 /* utility classes */
-.container { 
-    max-width: 1450px;
-    margin: 0 auto;
+.container, .container-sm {
+    max-width: 1200px;
+    margin: 0 auto;  /* center */
     padding: 0 15px;
+    box-sizing: border-box;
 }
-.container-sm {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 /* buttons */
 .btn {
     display: inline-block;
@@ -496,8 +491,7 @@ hero {
     transition: right 0.3s ease-in-out;
 }
 
-.mobile-menu active 
-{
+.mobile-menu.active {
     right: 0;
 }
 .mobile-menu ul {

@@ -976,3 +976,23 @@ background: #dfceb4;
 }
 
 
+@media (max-width: 768px) {
+  /* Shrink hero heading and paragraph margins */
+  .hero-heading.text-xxl {
+      margin: 20px 0 5px; /* less bottom margin */
+  }
+
+  .hero.text-md {
+      margin: 5px 0 10px; /* less top and bottom margin */
+  }
+
+  /* Reduce spacing for counter-wrapper */
+  .counter-wrapper {
+      margin: 5px 0; /* less vertical space */
+  }
+
+  /* Optional: shrink padding inside hero for mobile */
+  .hero {
+      padding: 40px 15px;
+  }
+}

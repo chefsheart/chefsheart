@@ -516,12 +516,11 @@ hero {
     display: block;
  }
 
- .hero .container {
-    background: url('../Downloads/CH/tempbg.png') no-repeat; 
-    background-size: 350px 400px;
-    background-position: bottom;
-    height: 770px;
+.hero .container {
+    height: auto;  /* lets content determine height */
+    padding: 0;    /* keep padding minimal */
 }
+    
 }
 .hero .hero-content, .hero .hero-text {
     width: 100%;
@@ -536,9 +535,10 @@ hero {
 /* counter animation */
 .counter-wrapper {
     text-align: center;
-    margin: 2rem 0;
+    margin: 10px 0;
     color:#ffffff;
 }
+
 
 .count {
     font-size: 3rem;

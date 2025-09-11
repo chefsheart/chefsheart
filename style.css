@@ -811,34 +811,38 @@ background: #dfceb4;
     color: #555;
 }
 
-/* Meal Kits */
-
- .meal-kits {
-  padding: 60px 20px;
-  background-color: #f4ebe0;
-  text-align: center;
-  width: 100%;     /* use 100% instead of 100vw */
-  margin: 0;       /* remove negative margins */
-  box-sizing: border-box;
-}
-@media (max-width: 768px) {
-  .coming-text h3,
-  .coming-text p {
-    display: none;  /* completely hides the text */
-  }
+.meal-kits {
+    padding: 60px 20px;
+    background-color: #f4ebe0;
+    text-align: center;
+    width: 100%;          /* full width */
+    margin: 0 auto;       /* centered */
+    box-sizing: border-box;
+    min-height: auto;     /* remove 80vh, let content define height */
 }
 
+/* Meal Preview */
 .meal-preview {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    padding: 0 10px;      /* prevent overflow on small screens */
 }
 
+/* Meal Preview Image */
 .meal-preview img {
-    max-width: 350px;
+    max-width: 100%;      /* scale down on mobile */
+    width: 350px;         /* desktop size */
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+/* Coming Text */
+.coming-text {
+    max-width: 800px;     /* desktop width */
+    margin: 0 auto;
+    padding: 0 10px;      /* prevent overflow */
 }
 
 .coming-text h3 {
@@ -846,16 +850,30 @@ background: #dfceb4;
     color: #4b340c;
 }
 
-
 .coming-text p {
-    max-width: 800px;
-    margin: 0 auto;
     color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
 }
-
 
 /* ===== MOBILE STYLES ===== */
 @media (max-width: 768px) {
+    /* Hide Coming Fall 2025 text */
+    .coming-text h3,
+    .coming-text p {
+        display: none;
+    }
+
+    /* Meal preview padding to prevent overflow */
+    .meal-preview {
+        padding: 0 15px;
+    }
+
+    /* Ensure meal image scales down */
+    .meal-preview img {
+        width: 100%;        /* takes container width */
+        max-width: 300px;   /* max image width */
+    }
     /* Make navigation stack vertically */
     .navbar .main-menu ul {
         display: none; /* hide desktop menu */

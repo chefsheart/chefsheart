@@ -812,20 +812,20 @@ background: #dfceb4;
 }
 
 /* Meal Kits */
-.meal-kits {
-    padding: 60px 20px;
-    background-color: #f4ebe0;
-    text-align: center;
-        height: 80vh;
-            /* fill full screen height */
-            width: 100vw;
-            /* fill full screen width */
-                /* Ensure it stretches edge-to-edge */
-                    position: relative;
-                    left: 50%;
-                    right: 50%;
-                    margin-left: -50vw;
-                    margin-right: -50vw;
+
+ .meal-kits {
+  padding: 60px 20px;
+  background-color: #f4ebe0;
+  text-align: center;
+  width: 100%;     /* use 100% instead of 100vw */
+  margin: 0;       /* remove negative margins */
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .coming-text h3,
+  .coming-text p {
+    display: none;  /* completely hides the text */
+  }
 }
 
 .meal-preview {

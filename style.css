@@ -864,6 +864,16 @@ background: #dfceb4;
         display: none;
     }
 
+    @media (max-width: 768px) {
+    .meal-kits {
+        width: 100vw;       /* full viewport width */
+        margin-left: 0;     /* remove centering margin */
+        margin-right: 0;
+        padding-left: 15px; /* optional inner padding for content */
+        padding-right: 15px;
+    }
+}
+
     /* Meal preview padding to prevent overflow */
     .meal-preview {
         padding: 0 15px;

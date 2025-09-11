@@ -815,12 +815,14 @@ background: #dfceb4;
     padding: 60px 20px;
     background-color: #f4ebe0;
     text-align: center;
-    width: 100%;          /* full width */
-    margin: 0 auto;       /* centered */
-    box-sizing: border-box;
-    min-height: auto;     /* remove 80vh, let content define height */
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
-
 /* Meal Preview */
 .meal-preview {
     display: flex;
@@ -864,16 +866,18 @@ background: #dfceb4;
         display: none;
     }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     .meal-kits {
-        width: 100vw;       /* full viewport width */
-        margin-left: 0;     /* remove centering margin */
-        margin-right: 0;
-        padding-left: 15px; /* optional inner padding for content */
+        height: auto;        /* let it expand with content */
+        padding-left: 15px;  /* inner padding for mobile */
         padding-right: 15px;
+        left: 0;             /* remove the centering offset */
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;        /* full viewport width */
     }
 }
-
     /* Meal preview padding to prevent overflow */
     .meal-preview {
         padding: 0 15px;

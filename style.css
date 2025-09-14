@@ -960,3 +960,9 @@ background: #dfceb4;
         margin-top: 0;         /* ensure counter section moves up */
     }
 }
+
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none;
+    }
+}

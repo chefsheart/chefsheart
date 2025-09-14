@@ -1,17 +1,16 @@
 //mobile menu
 
-// MOBILE MENU TOGGLE
+// Mobile Navbar Toggle
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerButton = document.querySelector('.hamburger-button');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu-links');
 
-  if (!hamburgerButton || !mobileMenu) return; // safety check
-
-  hamburgerButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  }
 });
-    
 
 // counter
   const counter = document.querySelector('.count');

@@ -904,3 +904,44 @@ background: #dfceb4;
         padding: 20px;
     }
 }
+
+/* ===== Footer Fix ===== */
+.footer {
+    width: 100%;
+    background-color: #5c4033; /* adjust as needed */
+    color: white;
+    padding: 20px 0;
+    position: relative; /* ensures it's part of normal page flow */
+    bottom: 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+/* Keep links looking neat */
+.footer-grid a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-grid a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

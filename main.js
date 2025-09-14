@@ -1,8 +1,4 @@
 //mobile menu
-
-// Mobile Navbar Toggle
-
-
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {

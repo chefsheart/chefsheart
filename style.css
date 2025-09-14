@@ -1031,4 +1031,43 @@ background: #dfceb4;
     }
 }
 
+/* MOBILE HAMBURGER STYLING */
+@media (max-width: 768px) {
+    /* Ensure desktop menu is hidden */
+    .navbar .main-menu {
+        display: none;
+    }
 
+    /* Show hamburger button on mobile */
+    .navbar .hamburger-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        z-index: 1001; /* above mobile menu */
+    }
+
+    /* Hamburger lines */
+    .hamburger-button .hamburger-line {
+        width: 30px;
+        height: 4px; /* slightly thicker for visibility */
+        background-color: #422b0d; /* brown color */
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Optional: animate hamburger to X when active */
+    .hamburger-button.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger-button.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-button.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}

@@ -1071,3 +1071,9 @@ background: #dfceb4;
         transform: rotate(-45deg) translate(6px, -6px);
     }
 }
+
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 0; /* removes extra space completely */
+    }
+}

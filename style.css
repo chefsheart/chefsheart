@@ -1149,19 +1149,49 @@ background: #dfceb4;
         margin-bottom: 0;
     }
 
-    /*
 
-    .topnav {
+
+
+/* Hide mobile nav by default */
+.topnav {
+  display: none; /* Hidden on desktop */
+}
+
+/* Links inside nav */
+.topnav a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hover effect */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hamburger icon */
+.topnav .icon {
   display: none;
 }
 
-/* Show on small screens */
-@media screen and (max-width: 600px) {
-  .navbar {
-    display: none; /* Hide desktop menu */
-  }
-  .topnav {
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+  .navbar { display: none; }       /* Hide desktop menu */
+  .topnav { display: block; }       /* Show mobile menu */
+  .topnav a { display: none; }      /* Hide links initially */
+  .topnav a.icon {
     display: block;
-    background-color: #8B4513; /* brown */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive { position: relative; }
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
   }
 }

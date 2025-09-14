@@ -1150,3 +1150,18 @@ background: #dfceb4;
     }
 
     /*
+
+    .topnav {
+  display: none;
+}
+
+/* Show on small screens */
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none; /* Hide desktop menu */
+  }
+  .topnav {
+    display: block;
+    background-color: #8B4513; /* brown */
+  }
+}

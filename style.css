@@ -856,3 +856,51 @@ background: #dfceb4;
         padding-top: 0;             /* remove extra padding */
     }
 }
+
+
+/* iPhone & small screens: width 480px or below */
+@media (max-width: 480px) {
+    /* Example: Stack navbar links vertically */
+    .navbar .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Shrink large headings for small screens */
+    .text-xxl, .text-xxll, .text-xl, .text-lg {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* Full width hero text for better readability */
+    .hero .hero-content, .hero .hero-text-md {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Buttons full-width on small screens */
+    .btn {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    /* Images scale nicely */
+    .img-gallery {
+        grid-template-columns: 1fr; /* 1 column layout on small screens */
+        gap: 15px;
+        margin: 30px auto;
+    }
+
+    /* Contact section stacked vertically */
+    .contact-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        padding: 20px;
+    }
+}

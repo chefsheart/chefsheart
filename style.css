@@ -983,5 +983,52 @@ background: #dfceb4;
 }
 
 
+/* MOBILE NAVBAR ONLY */
+@media (max-width: 768px) {
+    /* Hide desktop menu */
+    .navbar .main-menu {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    /* Mobile menu initial state (hidden offscreen) */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* hidden to the right */
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 80px; /* space for logo/header */
+    }
+
+    /* Show mobile menu when active (your JS should toggle 'active' class) */
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .mobile-menu ul li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu ul li a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+    }
+}
 
 

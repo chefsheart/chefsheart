@@ -981,57 +981,76 @@ background: #dfceb4;
         padding-top: 0;             /* remove extra padding */
     }
 }
-/* Desktop: hide mobile navbar */
-.mobile-navbar {
-  display: none;
+
+
+
+
+/* Hide mobile navbar by default, show desktop */
+.mobile-navbar { display: none; }
+
+/* Desktop menu styling */
+.desktop-navbar .main-menu ul {
+    display: flex;
+    gap: 15px;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .navbar { display: none; } /* hide desktop navbar on mobile */
+.desktop-navbar ul li a {
+    padding: 10px 15px;
+    font-weight: 600;
+}
 
-  .mobile-navbar {
-    display: block;
-    background-color: #6B4F3B; /* brown color */
-    padding: 10px;
+/* Dropdown for desktop */
+.desktop-navbar ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.desktop-navbar ul li:hover ul.dropdown { display: block; }
+
+/* Mobile navbar: brown background, hidden on desktop */
+.mobile-navbar {
+    background-color: #422b0d;
+    color: #fff;
     position: relative;
-  }
+    padding: 15px 20px;
+}
 
-  .mobile-navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .mobile-menu-toggle {
+/* Hamburger button */
+.hamburger-button {
+    display: none; /* only show on mobile */
     background: none;
     border: none;
-    font-size: 2rem;
-    color: white;
     cursor: pointer;
-  }
+}
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+}
 
-  .mobile-menu-links {
+/* Mobile menu */
+.mobile-menu {
     display: none;
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    background: #6B4F3B;
-    text-align: center;
-  }
-
-  .mobile-menu-links li {
+    flex-direction: column;
+    background: #422b0d;
+    margin-top: 10px;
+}
+.mobile-menu ul li {
     padding: 10px 0;
-  }
+}
+.mobile-menu ul li a { color: #fff; text-decoration: none; }
 
-  .mobile-menu-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
+/* Show mobile navbar on small screens */
+@media (max-width: 768px) {
+    .desktop-navbar { display: none; }
+    .mobile-navbar { display: flex; justify-content: space-between; align-items: center; }
+    .hamburger-button { display: block; }
 
-  /* When active */
-  .mobile-menu-links.active {
-    display: block;
-  }
+    .mobile-menu.active { display: flex; }
 }

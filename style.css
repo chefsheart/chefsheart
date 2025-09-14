@@ -1136,3 +1136,17 @@ background: #dfceb4;
         color: var(--primary-color);
     }
 }
+
+
+@media (max-width: 768px) {
+    /* Shrink space under hero section and button */
+    .hero {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .hero-buttons {
+        margin-bottom: 0;
+    }
+
+    /*

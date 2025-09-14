@@ -1,16 +1,16 @@
 //mobile menu
 
 // Mobile Navbar Toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileToggle = document.getElementById('mobile-menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu-links');
 
-  if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
-});
+}
 
 // counter
   const counter = document.querySelector('.count');

@@ -1077,3 +1077,62 @@ background: #dfceb4;
         margin-bottom: 0; /* removes extra space completely */
     }
 }
+
+
+/* Mobile-only navbar */
+@media (max-width: 768px) {
+    /* Hide the desktop menu */
+    .navbar .main-menu {
+        display: none;
+    }
+
+    /* Show the hamburger button */
+    .navbar .hamburger-button {
+        display: block;
+        background-color: #422b0d; /* brown background */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .hamburger-button .hamburger-line {
+        background-color: #fff; /* make lines visible */
+    }
+
+    /* Mobile menu sliding from right */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* hidden by default */
+        width: 250px;
+        height: 100%;
+        background-color: #422b0d; /* brown background */
+        z-index: 999;
+        transition: right 0.3s ease-in-out;
+        padding-top: 60px; /* space for hamburger */
+    }
+
+    /* Show menu when active class is added via JS */
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .mobile-menu ul li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu ul li a {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .mobile-menu ul li a:hover {
+        color: var(--primary-color);
+    }
+}

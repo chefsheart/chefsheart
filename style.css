@@ -1201,6 +1201,10 @@ background: #dfceb4;
     position: absolute;
     right: 0;
     top: 0;
+
+ .topnav {
+  display: block; /* show topnav only on mobile */
+}
   }
   .topnav.responsive a {
     float: none;

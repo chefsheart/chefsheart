@@ -1191,6 +1191,8 @@ background: #dfceb4;
   .topnav a.icon {
     float: right;
     display: block;
+        display: none;
+
   }
 }
 

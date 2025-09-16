@@ -1214,3 +1214,18 @@ background: #dfceb4;
     text-align: left;
   }
 }
+
+
+@media (max-width: 768px) {
+    .hero, 
+    .hero .container {
+        height: auto !important;     /* Let content decide height */
+        min-height: 0 !important;    /* No forced minimum height */
+        padding: 2rem 1rem;          /* Adjust spacing so text looks good */
+        margin-bottom: 0 !important; /* Remove extra bottom gap */
+    }
+
+    .hero-content {
+        text-align: center;          /* Center text on small screens */
+    }
+}

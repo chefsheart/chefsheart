@@ -1216,17 +1216,21 @@ background: #dfceb4;
 }
 
 
-/* Mobile fixes for Hero section */
 @media (max-width: 768px) {
     .hero, 
     .hero .container {
-        height: auto !important;       /* Let content decide height */
-        min-height: 0 !important;      /* No forced minimum height */
-        padding: 1rem 1rem 2rem;       /* Less top padding, same sides/bottom */
-        margin-bottom: 0 !important;   /* Remove extra bottom gap */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;   /* Push content toward the top */
+        align-items: center;
+        height: auto !important;       /* No hardcoded height */
+        min-height: 0 !important;      /* Allow shrinking */
+        padding: 0.5rem 1rem 2rem;     /* Even less top padding */
+        margin-bottom: 0 !important;   /* Remove bottom gap */
+        text-align: center;            /* Keep text centered horizontally */
     }
 
     .hero-content {
-        text-align: center;            /* Center text on small screens */
+        margin-top: 0;                  /* No extra spacing above content */
     }
 }

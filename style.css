@@ -1215,17 +1215,18 @@ background: #dfceb4;
   }
 }
 
-
+    /* Mobile Hero Fixes Only */
 @media (max-width: 768px) {
     .hero, 
     .hero .container {
-        height: auto !important;     /* Let content decide height */
-        min-height: 0 !important;    /* No forced minimum height */
-        padding: 2rem 1rem;          /* Adjust spacing so text looks good */
-        margin-bottom: 0 !important; /* Remove extra bottom gap */
-    }
-
-    .hero-content {
-        text-align: center;          /* Center text on small screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;   /* Push content higher on mobile */
+        align-items: center;           /* Center horizontally */
+        min-height: 250px;             /* Smaller min height for phones */
+        padding: 3rem 1rem 2rem;       /* Top padding so text isn’t cramped */
+        margin-bottom: 0;              /* Remove extra gap below hero */
+        text-align: center;            /* Center text on mobile */
+        height: auto !important;       /* Prevent hardcoded height issues */
     }
 }

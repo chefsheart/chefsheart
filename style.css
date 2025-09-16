@@ -71,8 +71,8 @@ img {
 .hero .container {
  /*   background: url('tempbg.png') no-repeat;
     background-size: contain;
-    background-position: right bottom;
-    height: 250px;*/
+    background-position: right bottom;*/
+    height: 250px;
     padding: 0 0;
 }
 

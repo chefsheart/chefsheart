@@ -1216,21 +1216,27 @@ background: #dfceb4;
 }
 
 
+/* Mobile fixes for Hero section */
 @media (max-width: 768px) {
     .hero, 
     .hero .container {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;   /* Push content toward the top */
+        justify-content: flex-start;   /* Keep content toward the top */
         align-items: center;
-        height: auto !important;       /* No hardcoded height */
-        min-height: 0 !important;      /* Allow shrinking */
-        padding: 0.5rem 1rem 2rem;     /* Even less top padding */
-        margin-bottom: 0 !important;   /* Remove bottom gap */
-        text-align: center;            /* Keep text centered horizontally */
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0.3rem 1rem 2rem;     /* Slightly less top padding */
+        margin-bottom: 0 !important;
+        text-align: center;
     }
 
     .hero-content {
-        margin-top: 0;                  /* No extra spacing above content */
+        margin-top: 0;
+    }
+
+    .hero-heading.text-xxl {
+        font-size: 2.2rem;             /* Slightly bigger for mobile */
+        line-height: 1.3;
     }
 }

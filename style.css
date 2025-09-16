@@ -1215,18 +1215,18 @@ background: #dfceb4;
   }
 }
 
-    /* Mobile Hero Fixes Only */
+
+/* Mobile fixes for Hero section */
 @media (max-width: 768px) {
     .hero, 
     .hero .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;   /* Push content higher on mobile */
-        align-items: center;           /* Center horizontally */
-        min-height: 250px;             /* Smaller min height for phones */
-        padding: 3rem 1rem 2rem;       /* Top padding so text isn’t cramped */
-        margin-bottom: 0;              /* Remove extra gap below hero */
-        text-align: center;            /* Center text on mobile */
-        height: auto !important;       /* Prevent hardcoded height issues */
+        height: auto !important;       /* Let content decide height */
+        min-height: 0 !important;      /* No forced minimum height */
+        padding: 1rem 1rem 2rem;       /* Less top padding, same sides/bottom */
+        margin-bottom: 0 !important;   /* Remove extra bottom gap */
+    }
+
+    .hero-content {
+        text-align: center;            /* Center text on small screens */
     }
 }

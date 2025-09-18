@@ -1255,3 +1255,17 @@ background: #dfceb4;
         margin-right: auto;
     }
 }
+
+
+
+    /* Hide Gallery on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Show Gallery only on mobile */
+@media screen and (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+}

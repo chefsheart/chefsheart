@@ -1269,11 +1269,9 @@ background: #dfceb4;
     display: block;
   }
 }
-
-/* Default desktop view with fixed dimensions */
+/* Default for desktop: fixed dimensions */
 .video-wrapper {
   width: 660px;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -1281,17 +1279,17 @@ background: #dfceb4;
   width: 660px;
   height: 415px;
   display: block;
-  margin: 0 auto;
 }
 
-/* Mobile view: make it responsive */
+/* On mobile: full width, keep 16:9 ratio */
 @media screen and (max-width: 768px) {
   .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
+    max-width: 100%;
   }
 
   .video-wrapper iframe {
@@ -1300,5 +1298,6 @@ background: #dfceb4;
     left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
   }
 }
